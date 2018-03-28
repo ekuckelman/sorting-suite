@@ -2,6 +2,7 @@ const {assert} = require('chai');
 const insertionSort = require('../lib/insertionSort.js');
 
 describe('Insertion Sort', () => {
+  let largeArray = [];
   it('should be able to sort a small array of numbers', () => {
     let array = [2, 5, 3, 4, 1, 6, 7, 8];
     insertionSort(array);
@@ -14,8 +15,20 @@ describe('Insertion Sort', () => {
     assert.deepEqual(array, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']);
   });
 
+  it('should be able to sort an array of positive and negative values', function() {
+    let min = -100;
+    let max = 100;
+
+    for(let i = 0; i < Math.abs(min) + max; i++) {
+      let number = Math.floor(Math.random() * (max - min)) + min;
+      largeArray.push(number)
+    }
+
+    const sortedArray = insertionSort(largeArray)
+    assert.isAtLeast(sortedArray[1], sortedArray[0]);
+  });
+
   it('should be able to sort a large array of random numbers', () => {
-    let largeArray = [];
     let min = 0;
     let max = 40000;
     console.log('max', max)
