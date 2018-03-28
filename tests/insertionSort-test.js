@@ -17,7 +17,7 @@ describe('Insertion Sort', () => {
   it('should be able to sort a large array of random numbers', () => {
     let largeArray = [];
     let min = 0;
-    let max = 43000;
+    let max = 40000;
     console.log('max', max)
     for(let i = 0; i < max; i++) {
       let number = Math.floor(Math.random() *(max - min) + min);
@@ -25,6 +25,6 @@ describe('Insertion Sort', () => {
     }
 
     insertionSort(largeArray);
-    assert.isAtLeast(largeArray[40], largeArray[39], 'LargeArray index 40 is greater than LargeArray index 39');
+    assert.isAtLeast(largeArray[40], largeArray[39]);
   });
 });
