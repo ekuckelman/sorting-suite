@@ -13,21 +13,6 @@ describe('mergeSort', function() {
     assert.deepEqual(sort(array), ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']);
   })
 
-  it('should be able to sort an array of positive and negative values', function() {
-
-    let min = -100;
-    let max = 100;
-
-    for(let i = 0; i < Math.abs(min) + max; i++) {
-      let number = Math.floor(Math.random() * (max - min)) + min;
-      bigArray.push(number)
-    }
-
-    const sortedArray = sort(bigArray)
-
-    assert.isAtLeast(sortedArray[1], sortedArray[0], 'Big array index 50 is greater or equal to then bigArray index 40')
-  })
-
   it('should be able to sort a large array of random numbers', function() {
 
     let min = 0;
