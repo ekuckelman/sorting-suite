@@ -16,7 +16,7 @@ describe('quickSort', function() {
   it('should be able to sort a large array of random numbers', function() {
 
     let min = 0;
-    let max = 1080000;
+    let max = 2000000;
     console.log('max', max)
 
     for(let i = 0; i < Math.abs(min) + max; i++) {
@@ -26,6 +26,6 @@ describe('quickSort', function() {
 
      const sortedArray = quickSort(bigArray)
 
-    assert.isAtLeast(sortedArray[1], sortedArray[0], 'Big array index 50 is greater or equal to then bigArray index 40')
+    assert.isAtLeast(sortedArray[40], sortedArray[39]);
   })
 })

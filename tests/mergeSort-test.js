@@ -26,6 +26,6 @@ describe('mergeSort', function() {
 
      const sortedArray = sort(bigArray)
 
-    assert.isAtLeast(sortedArray[1], sortedArray[0], 'Big array index 50 is greater or equal to then bigArray index 40')
+    assert.isAtLeast(sortedArray[1], sortedArray[0]);
   })
 })
