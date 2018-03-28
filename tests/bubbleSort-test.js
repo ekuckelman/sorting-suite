@@ -17,7 +17,7 @@ describe('bubble Sort', () => {
   it('should be able to sort a large array of random numbers', () => {
     let largeArray = [];
     let min = 0;
-    let max = 17000;
+    let max = 15000;
     console.log('max', max)
 
     for(let i = 0; i < max; i++) {
@@ -26,6 +26,6 @@ describe('bubble Sort', () => {
     }
 
     bubbleSort(largeArray);
-    assert.isAtLeast(largeArray[40], largeArray[39], 'LargeArray index 40 is greater than LargeArray index 39');
+    assert.isAtLeast(largeArray[40], largeArray[39]);
   });
 });
