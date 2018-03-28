@@ -17,10 +17,11 @@ describe('bubble Sort', () => {
   it('should be able to sort a large array of random numbers', () => {
     let largeArray = [];
     let min = 0;
-    let max = 1000;
+    let max = 17000;
+    console.log('max', max)
 
     for(let i = 0; i < max; i++) {
-      let number = Math.floor(Math.random() *(max + min));
+      let number = Math.floor(Math.random() *(max - min) + min);
       largeArray.push(number);
     }
 
