@@ -31,7 +31,7 @@ describe('mergeSort', function() {
   it('should be able to sort a large array of random numbers', function() {
 
     let min = 0;
-    let max = 2000000;
+    let max = 1500000;
     console.log('max', max);
 
     for(let i = 0; i < Math.abs(min) + max; i++) {
